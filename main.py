@@ -18,11 +18,4 @@ def modi():
 
 
 
-
-
-
-
-
-
-
 app.run()
