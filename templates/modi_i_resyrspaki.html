@@ -1,87 +1,173 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Моды и русурспаки</title>
-     <style>
-        p {
-            font-size: 24px;
+    <title>Моды и ресурспаки</title>
+    <style>
+
+        body {
+            background-color: #2d521a;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 15px;
+        }
+
+        .glavniy {
+            background-color: #5a3c22;
+            max-width: 1100px;
+            margin: 0 auto;
+            border: 4px solid #3b2a1a;
+            padding: 15px;
+        }
+
+
+        .menu {
+            background-color: #3b2a1a;
+            padding: 12px;
+            border: 3px solid #2a1f12;
+            margin-bottom: 20px;
+        }
+        .menu a {
+            color: #ffefb9;
+            background-color: #4e6b2c;
+            padding: 8px 20px;
+            text-decoration: none;
+            border: 2px solid #2a4615;
+            margin-right: 15px;
+            font-size: 18px;
+            display: inline-block;
+        }
+        .menu a:hover {
+            background-color: #c9923a;
+            color: #2c2b0e;
+        }
+
+
+        .zagolovok {
+            background-color: #7a5a2e;
+            text-align: center;
+            padding: 20px;
+            border: 3px solid #4a351a;
+            margin-bottom: 20px;
+        }
+        .zagolovok h1 {
+            color: #fff2bf;
+            font-size: 28px;
+            margin: 0;
+        }
+
+
+        .ssylki_modov {
+            background-color: #3e2b1b;
+            padding: 15px;
+            border: 3px solid #2a1d10;
+            margin-bottom: 20px;
+        }
+        .ssylki_modov a {
+            color: #ffdb8b;
+            font-size: 18px;
+            display: inline-block;
+            margin: 5px 0;
+            text-decoration: none;
+        }
+        .ssylki_modov a:hover {
+            color: #c9923a;
+        }
+
+
+        .mod {
+            background-color: #2f261c;
+            padding: 15px;
+            border: 3px solid #1e180f;
+            margin-bottom: 20px;
+        }
+        .mod h2 {
+            color: #ffdd9a;
+            font-size: 26px;
+            margin-top: 0;
+        }
+        .mod p {
+            color: #f5e7c8;
+            font-size: 16px;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        /* подвал */
+        .podval {
+            background-color: #2a4318;
+            text-align: center;
+            padding: 12px;
+            border: 3px solid #1c2e10;
+            margin-top: 20px;
+            color: #efe2b6;
+        }
+
+        @media (max-width: 700px) {
+            .zagolovok h1 { font-size: 20px; }
+            .menu a { font-size: 14px; padding: 5px 12px; margin-right: 8px; margin-bottom: 5px; display: inline-block; }
+            .mod h2 { font-size: 20px; }
         }
     </style>
 </head>
 <body>
-<a href="{{url_for('osnova')}}">Основная часть</a>
-<a href="{{url_for('index')}}">Вступление</a>
 
-<h1>Ниже будет список интерестных модов и их описание.</h1>
-<a href="#Thaumcraft">Thaumcraft</a> <br>
+<div class="glavniy">
 
-
-<a href="#Create">Create</a><br>
-<a href="#The Twilight Forest"> The Twilight Forest</a><br>
-<a href="#MrCrayfish's Furniture">MrCrayfish's Furniture</a><br>
-<a href="#Ice and Fire: Dragons">Ice and Fire: Dragons</a>
-
-<h2 id="Thaumcraft">Thaumcraft</h2>
-<p>Позволяет почувствовать себя настоящим магом. Изучайте магическую энергию (вис), создавайте палочки, алхимические зелья и сложные големы для помощи по хозяйству.</p>
-
-<h2 id="Create">Create</h2>
-<p>Невероятно красивый мод, добавляющий механическую энергию (шестеренки, ремни, валы). Позволяет создавать сложные анимированные постройки, гигантские поезда и полностью автоматизированные фермы.</p>
-
-<h2 id="The Twilight Forest">The Twilight Forest</h2>
-<p>Добавляет целое гигантское измерение — заколдованный Сумеречный лес. Там вас ждут густые заросли, уникальные данжи, боссы и ценные награды.</p>
-
-<h2 id="MrCrayfish's Furniture">MrCrayfish's Furniture</h2>
-<p>: Добавляет в игру десятки реалистичных предметов мебели и бытовой техники (телевизоры, диваны, стулья, компьютеры), чтобы обустроить ваш дом.</p>
-
-<h2 id="Ice and Fire: Dragons">Ice and Fire: Dragons</h2>
-<p>Спавнит в мире опасных и реалистичных драконов (ледяных и огненных), а также других мифических существ (гидр, горгон). Вы сможете выращивать собственных драконов.</p>
+    <div class="menu">
+        <a href="{{ url_for('osnova') }}">Основная часть</a>
+        <a href="{{ url_for('index') }}">Вступление</a>
+    </div>
 
 
+    <div class="zagolovok">
+        <h1>Ниже будет список интересных модов и их описание.</h1>
+    </div>
 
 
+    <div class="ssylki_modov">
+        <a href="#Thaumcraft">Thaumcraft</a><br>
+        <a href="#Create">Create</a><br>
+        <a href="#The Twilight Forest">The Twilight Forest</a><br>
+        <a href="#MrCrayfish's Furniture">MrCrayfish's Furniture</a><br>
+        <a href="#Ice and Fire: Dragons">Ice and Fire: Dragons</a>
+    </div>
 
 
+    <div class="mod">
+        <h2 id="Thaumcraft">Thaumcraft</h2>
+        <p>Позволяет почувствовать себя настоящим магом. Изучайте магическую энергию (вис), создавайте палочки, алхимические зелья и сложные големы для помощи по хозяйству.</p>
+    </div>
 
 
+    <div class="mod">
+        <h2 id="Create">Create</h2>
+        <p>Невероятно красивый мод, добавляющий механическую энергию (шестеренки, ремни, валы). Позволяет создавать сложные анимированные постройки, гигантские поезда и полностью автоматизированные фермы.</p>
+    </div>
 
 
+    <div class="mod">
+        <h2 id="The Twilight Forest">The Twilight Forest</h2>
+        <p>Добавляет целое гигантское измерение — заколдованный Сумеречный лес. Там вас ждут густые заросли, уникальные данжи, боссы и ценные награды.</p>
+    </div>
 
 
+    <div class="mod">
+        <h2 id="MrCrayfish's Furniture">MrCrayfish's Furniture</h2>
+        <p>Добавляет в игру десятки реалистичных предметов мебели и бытовой техники (телевизоры, диваны, стулья, компьютеры), чтобы обустроить ваш дом.</p>
+    </div>
 
 
+    <div class="mod">
+        <h2 id="Ice and Fire: Dragons">Ice and Fire: Dragons</h2>
+        <p>Спавнит в мире опасных и реалистичных драконов (ледяных и огненных), а также других мифических существ (гидр, горгон). Вы сможете выращивать собственных драконов.</p>
+    </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div class="podval">
+        <p></p>
+    </div>
+</div>
 
 </body>
 </html>
